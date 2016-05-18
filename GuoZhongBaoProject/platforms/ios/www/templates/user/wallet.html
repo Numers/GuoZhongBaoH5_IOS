@@ -1,0 +1,23 @@
+<ion-view view-title="我的钱包" class="wallet-wrapper">
+    <ion-content>
+        <div class="wallet-content">
+            <div class="cash">
+                <p class="cash-title">还款金（元）</p>
+                <div class="cash-amount">{{ walletModel.cash }}</div>
+                <p class="cash-usage">还款金可以抵用任意还款</p>
+            </div>
+            <ul class="coupon-list">
+                <li class="coupon-item" ng-repeat="couponItem in walletModel.couponList">
+                    <div class="coupon-amount">{{ couponItem.amount }}</div>
+                    <div class="coupon-detail">
+                        <div class="clearfix">
+                            <div class="coupon-type">抵用券</div>
+                            <div class="coupon-usage">仅适用于 {{ couponItem.for_amount }} 元借款</div>
+                        </div>
+                        <div class="coupon-expire">有效期：{{ couponItem.created_at.split(' ')[0] }}至{{ couponItem.expire_at.split(' ')[0] }}</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </ion-content>
+</ion-view>

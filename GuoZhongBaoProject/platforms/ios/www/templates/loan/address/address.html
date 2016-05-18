@@ -1,0 +1,20 @@
+<ion-view title="{{title}}" hide-back-button="true" class="bgc-e9">
+    <ion-nav-buttons side="left">
+        <a href="#/loan/userinfo" class="custom-back button button-icon icon ion-ios-arrow-back icon-home"></a>
+    </ion-nav-buttons>
+    <ion-content class="has-header no-footer">
+        <form id="address-form">
+            <div class="userinfo-group">
+                <label>省市区</label>
+                <input type="text" placeholder="请选择" ng-model="address.area" on-tap="selectArea()" readonly required/>
+                <i class="ion-ios-arrow-right"></i>
+            </div>
+            <div class="userinfo-group" style="border: 0" ng-hide="hideDetail">
+                <input type="text" placeholder="请输入详细地址" ng-model="address.detail" required/>
+            </div>
+        </form>
+        <div class="submit-bottom-blue">
+            <div on-tap="saveAddress(address.detail)">提交</div>
+        </div>
+    </ion-content>
+</ion-view>

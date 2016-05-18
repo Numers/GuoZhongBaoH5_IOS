@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="http://resourceh5.guozhongbao.com/www/activity/redpacket/public/css/app.min.css">
+    <link rel="shortcut icon" href="http://resource.guozhongbao.com/sites/pc/img/gzb.ico">
+    <title>红包使用说明</title>
+    <style>
+        .redgudie-wrapper {
+            overflow: scroll;
+        }
+
+        .guide-topbar {
+            padding-top: 20px;
+            background: #ff6140;
+        }
+
+        .guide-content {
+            height: 100%;
+            padding: .5em 1em;
+            margin: 0 auto;
+            background: #8630c2;
+        }
+
+        .guide-img {
+            width: 100%;
+        }
+
+        .redpacket-rule {
+            margin-top: .5em;
+            line-height: 1.5;
+            font-size: .75em;
+            color: #fff;
+            border-top: 1px solid #fff;
+        }
+
+        .redpacket-rule-title {
+            margin-top: .3em;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        small {
+            font-family: 'Microsoft YaHei', '微软雅黑', Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="app-page redgudie-wrapper" data-page="redguide" id="redguide">
+        <div class="app-topbar guide-topbar">
+            <div class="app-button left size-default" data-back data-autotitle id="Back"></div>
+            <div class="app-title">红包使用说明</div>
+        </div>
+        <div class="guide-content">
+            <img src="http://resourceh5.guozhongbao.com/www/activity/redpacket/public/image/share_logo.png" alt="head" class="guide-img">
+            <div class="redpacket-rule">
+                <p class="redpacket-rule-title">红包使用规则</p>
+                <p>1、用户按照正常注册流程进入国众宝app，一个手机号只允许注册一个用户，新人成功注册并填入有效“兑换码“，即可领取5元现金；</p>
+                <p>2、本活动对象仅针对18-45周岁开放地区蓝领群体。</p>
+                <p>3、每个有效身份对应一个用户，仅限活动有效期内提现。</p>
+                <p>4、如果您的账户信息曾经在其它征信平台被判断为可疑或不良，则无法参与本次活动提现。</p>
+                <p class="redpacket-disclaimer"><small>＊本活动最终解释权归国众宝所有</small></p>
+            </div>
+        </div>
+    </div>
+    <script src="http://resourceh5.guozhongbao.com/www/activity/redpacket/public/js/lib/zepto.js"></script>
+    <script src="http://resourceh5.guozhongbao.com/www/activity/redpacket/public/js/lib/app.min.js"></script>
+    <script src="http://resourceh5.guozhongbao.com/www/activity/redpacket/public/js/config.js"></script>
+    <script>
+        App.controller('redguide', function(page) {
+            $(page).find("#Back").on('click', function() {
+                window.history.back();
+            });
+        });
+        try {
+            App.restore();
+        } catch (err) {
+            App.load('redguide');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>添加银行卡</title>
+    <link rel="stylesheet" href="/iframe/add-bank.css">
+</head>
+<body>
+<form class="i-bank-form">
+    <div class="control-group">
+        <label class="control-label">手机号</label>
+        <input type="tel" name="phone" id="phone" placeholder="请输入手机号"
+               class="control-input-text">
+    </div>
+    <div class="control-group">
+        <label class="control-label">银行卡</label>
+        <input type="tel" name="bank" id="bank" placeholder="请输入银行卡号"
+               class="control-input-text">
+    </div>
+    <div class="bank-protocol">
+        <label class="checkbox-label">
+            <input type="checkbox" checked="false" class="control-checkbox" id="agreement">
+        </label>
+        <a href="agreement.html" class="link-text">商联通付代扣协议</a>
+    </div>
+    <div class="padding">
+        <button type="button" class="control-block-button" id="nextBtn">
+            下一步
+        </button>
+        <button type="button" class="control-block-button" id="backBtn">
+            返回
+        </button>
+    </div>
+</form>
+<script src="/iframe/add-bank.js"></script>
+</body>
+</html>

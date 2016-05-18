@@ -1,0 +1,49 @@
+<ion-view title="还款" hide-back-button="true">
+    <ion-content class="repayment-wrapper">
+        <div class="repayment-content">
+            <div class="repayment-top">
+                <p class="repayment-title">应还款额（元）</p>
+                <div class="repayment-amount">{{ repaymentModel.total || '暂无还款' }}</div>
+                <p class="repayment-date">本期还款日：{{ (repaymentModel.date.split(' ')[0]) || '&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;-' }}</p>
+            </div>
+            <div class="repayment-detail clearfix">
+                <div class="repayment-detail-item">
+                    <div class="repayment-detail-inner">
+                        <div class="repayment-detail-top">往期未还</div>
+                        <div class="repayment-detail-down">{{ repaymentModel.unpaid || '-' }}元</div>
+                    </div>
+                </div>
+                <div class="repayment-detail-item">
+                    <div class="repayment-detail-inner">
+                        <div class="repayment-detail-top">滞纳金</div>
+                        <div class="repayment-detail-down">{{ repaymentModel.lateFees || '-' }}元</div>
+                    </div>
+                </div>
+                <div class="repayment-detail-item">
+                    <div class="repayment-detail-inner">
+                        <div class="repayment-detail-top">本期</div>
+                        <div class="repayment-detail-down">{{ repaymentModel.currentPeriod || '-' }}元</div>
+                    </div>
+                </div>
+                <div class="repayment-detail-item">
+                    <div class="repayment-detail-inner">
+                        <div class="repayment-detail-top">抵扣红包</div>
+                        <div class="repayment-detail-down">{{ repaymentModel.redPacket || '-' }}元</div>
+                    </div>
+                </div>
+            </div>
+            <div class="padding">
+                <div ng-show="!repaymentModel.status">
+                    <button class="button control-block-button repayment-overdue" ng-click="repay(3, repaymentModel.payOverdue)" ng-show="repaymentModel.overdueShow">
+                        只还逾期({{ repaymentModel.payOverdue }})
+                    </button>
+                    <button class="button control-block-button repayment-current" ng-click="repay(0, repaymentModel.payCurrent)">本期还款({{ repaymentModel.payCurrent }})</button>
+                    <button class="button control-block-button repayment-all" ng-click="repay(1, repaymentModel.payTotal)">全部还清({{ repaymentModel.payTotal }})</button>
+                </div>
+                <div ng-show="repaymentModel.status">
+                    <button class="button control-block-button repayment-empty">已还款</button>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

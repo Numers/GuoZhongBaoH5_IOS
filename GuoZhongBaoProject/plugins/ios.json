@@ -1,0 +1,196 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"UmPay\"><param name=\"ios-package\" value=\"CDVUMPay\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"UserInfo\"><param name=\"ios-package\" value=\"CDVUserInfo\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"CookieStore\"><param name=\"ios-package\" value=\"CDVCookieStore\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Camera\"><param name=\"ios-package\" value=\"CDVCamera\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"CameraUsesGeolocation\" value=\"false\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"AddressBook\"><param name=\"ios-package\" value=\"CDVAddressBook\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"AliPay\"><param name=\"ios-package\" value=\"CDVAlipay\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"AliPay\" value=\"qdcalipay\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Location\"><param name=\"ios-package\" value=\"CDVLocation\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Share\"><param name=\"ios-package\" value=\"CDVShare\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "framework": {
+                "parents": {
+                    "libz.1.2.5.dylib": [
+                        {
+                            "xml": false,
+                            "count": 1
+                        }
+                    ],
+                    "libsqlite3.dylib": [
+                        {
+                            "xml": false,
+                            "count": 1
+                        }
+                    ],
+                    "CoreGraphics.framework": [
+                        {
+                            "xml": false,
+                            "count": 2
+                        }
+                    ],
+                    "CoreLocation.framework": [
+                        {
+                            "xml": false,
+                            "count": 2
+                        }
+                    ],
+                    "CoreText.framework": [
+                        {
+                            "xml": false,
+                            "count": 1
+                        }
+                    ],
+                    "CFNetwork.framework": [
+                        {
+                            "xml": false,
+                            "count": 1
+                        }
+                    ],
+                    "CoreFoundation.framework": [
+                        {
+                            "xml": false,
+                            "count": 1
+                        }
+                    ],
+                    "CoreTelephony.framework": [
+                        {
+                            "xml": false,
+                            "count": 1
+                        }
+                    ],
+                    "Security.framework": [
+                        {
+                            "xml": false,
+                            "count": 2
+                        }
+                    ],
+                    "SystemConfiguration.framework": [
+                        {
+                            "xml": false,
+                            "count": 2
+                        }
+                    ],
+                    "AssetsLibrary.framework": [
+                        {
+                            "xml": false,
+                            "count": 2
+                        }
+                    ],
+                    "ImageIO.framework": [
+                        {
+                            "xml": true,
+                            "count": 1
+                        }
+                    ],
+                    "MobileCoreServices.framework": [
+                        {
+                            "xml": false,
+                            "count": 1
+                        }
+                    ],
+                    "AddressBook.framework": [
+                        {
+                            "xml": false,
+                            "count": 1
+                        }
+                    ],
+                    "AddressBookUI.framework": [
+                        {
+                            "xml": false,
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "*-Info.plist": {
+                "parents": {
+                    "CFBundleURLTypes": [
+                        {
+                            "xml": "<array><dict><key>CFBundleTypeRole</key><string>Editor</string><key>CFBundleURLIconFile</key><string>icon-50@2x</string><key>CFBundleURLName</key><string>alipay</string><key>CFBundleURLSchemes</key><array><string>GZBIOSClient</string></array></dict></array>",
+                            "count": 1
+                        }
+                    ],
+                    "NSLocationWhenInUseUsageDescription": [
+                        {
+                            "xml": "<string />",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "cordova-plugin-umpay": {
+            "PACKAGE_NAME": "com.renrenfenqi.GuoZhongBao"
+        },
+        "cordova-plugin-userinfo": {
+            "PACKAGE_NAME": "com.renrenfenqi.GuoZhongBao"
+        },
+        "cordova-plugin-cookiestore": {
+            "PACKAGE_NAME": "com.renrenfenqi.GuoZhongBao"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.renrenfenqi.GuoZhongBao"
+        },
+        "cordova-plugin-addressbook": {
+            "PACKAGE_NAME": "com.renrenfenqi.GuoZhongBao"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.renrenfenqi.GuoZhongBao"
+        },
+        "cordova-plugin-alipay": {
+            "PACKAGE_NAME": "com.renrenfenqi.GuoZhongBao"
+        },
+        "cordova-plugin-location": {
+            "PACKAGE_NAME": "com.renrenfenqi.GuoZhongBao"
+        },
+        "cordova-plugin-share": {
+            "PACKAGE_NAME": "com.renrenfenqi.GuoZhongBao"
+        }
+    },
+    "dependent_plugins": {}
+}

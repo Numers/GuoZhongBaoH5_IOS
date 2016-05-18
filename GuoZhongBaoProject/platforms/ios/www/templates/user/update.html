@@ -1,0 +1,43 @@
+<ion-view view-title="修改绑定手机">
+    <ion-content class="update-wrapper">
+        <div class="update-content">
+            <form name="updateForm" class="update-form">
+                <fieldset>
+                    <div class="control-group">
+                        <label class="control-label" for="oldPhone">手机号</label>
+                        <input type="tel" id="oldPhone" class="control-input-text" ng-model="updateModel.oldPhone">
+                    </div>
+                    <div class="control-group">
+                        <label for="oldCaptcha" class="control-label">验证码</label>
+                        <input type="text" id="oldCaptcha" class="control-input-text"
+                               ng-model="updateModel.oldCaptcha" placeholder="请输入验证码">
+                        <button class="button control-small-button" ng-disabled="unbindCountdownModel.disabled" ng-click="getSmsCode('unbind')">
+                            {{ unbindCountdownModel.text }}
+                        </button>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class="control-group">
+                        <label class="control-label" for="newPhone">新手机号</label>
+                        <input type="tel" id="newPhone" class="control-input-text" ng-model="updateModel.newPhone">
+                    </div>
+                    <div class="control-group">
+                        <label for="newCaptcha" class="control-label">验证码</label>
+                        <input type="text" id="newCaptcha" class="control-input-text"
+                               ng-model="updateModel.newCaptcha" placeholder="请输入验证码">
+                        <button class="button control-small-button" ng-disabled="rebindCountdownModel.disabled" ng-click="getSmsCode('rebind')">
+                            {{ rebindCountdownModel.text }}
+                        </button>
+                    </div>
+                </fieldset>
+                <div class="padding">
+                    <p class="prompt">温馨提示：修改绑定手机后，登录账号为新手机号，密码不变</p>
+                    <button type="button" class="button control-block-button" ng-disabled="buttonModel.load" ng-click="checkForm()">
+                        <i class="icon ion-load-c icon-loading" ng-show="buttonModel.load"></i>
+                        {{ buttonModel.text }}
+                    </button>
+                </div>
+            </form>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="./public/css/app.min.css">
+    <link rel="stylesheet" href="./public/css/main.css">
+    <title></title>
+</head>
+<body>
+<div class="app-page" data-page="home" id="home">
+    <div class="app-topbar bg-red">
+        <div class="app-button left size-default" data-back data-autotitle id="Back"></div>
+        <div class="app-title">红包</div>
+        <div class="app-button right size-default get-code">输入兑换码</div>
+    </div>
+    <div class="app-content bg-color app-scrolldisable">
+        <div class="red-title">
+            <img src="http://resourceh5.guozhongbao.com/www/activity/redpacket/public/img/title.png" class="responsive"/>
+        </div>
+        <div class="row red-top red-padding-info">
+            <div></div>
+            <div class="row">
+                <div class="red-money">
+                    红包余额（元）
+                    <a class="right redpacket-info" href="/activity/redpacket/redguide.html">
+                        <img src="data:image/jpg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAWABYDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3KR77xfqt5b2t5NY6DZyGGSSA7ZLqQfeAbso/X+Vaz8KeHbnVdTsNOTUbLUdP8vzLqO4YEl1LKQSxz054FaPwtYJ4X+yPxdWtzNFcA9Q+8nn8CKu6JZeR4u8S3X2q1k+0/Zv3McmZItsZHzj+HPUeooAqeHtVvLHU7nQ/EMyyXEMYmt7vG0TxZxk+jA4B/wAklc98UbWfVdf06y0st9shtpJZdvUIWUDP4g0UAdDrmi3thqU2ueHbmGC4dR9qtpwTFcAdG45De4/xzzGneObzUNUmtNL0bTrXVLgqstzJISHIGAThQTgdMmiigDtfDOg/2T9pury4a91S7Ia4uWXGcdFUdlFFFFAH/9k="/>
+                        <p>使用说明</p>
+                    </a>
+                </div>
+                <div class="red-money-get row ">
+                    <div class="red-title-red left">0.00</div>
+                    <a class="btn btn-red right">立即提现</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" id="red-list">
+
+        </div>
+
+        <div class="row red-top red-padding-alert">
+            <div class="red-my-title">我的兑换码</div>
+            <div class="red-my-line"></div>
+            <div class="red-my-code">00000</div>
+            <div class="red-my-info">
+                <p class="red-my-info-f">活动期间,分享你的兑换码,</p>
+
+                <p class="red-my-info-f">每推广成功一个用户,可以获得一个5元现金红包</p>
+
+                <p class="red-my-info-f">你目前获得推荐收益 <span class="title-red">0</span>元</p>
+            </div>
+        </div>
+
+        <div class="row red-share">
+            <div class="red-share-title">推荐给好友</div>
+            <ul class="row red-share-list">
+                <li class="col-33 left">
+                    <div class="red-share-img">
+                        <img src="http://resourceh5.guozhongbao.com/www/activity/redpacket/public/img/wechat.png" class="responsive"/>
+                    </div>
+                    <div class="red-share-txt">微信好友</div>
+                </li>
+                <li class="col-33 left">
+                    <div class="red-share-img">
+                        <img src="http://resourceh5.guozhongbao.com/www/activity/redpacket/public/img/qzone.png" class="responsive"/>
+                    </div>
+                    <div class="red-share-txt">QQ空间</div>
+                </li>
+                <li class="col-33 right">
+                    <div class="red-share-img">
+                        <img src="http://resourceh5.guozhongbao.com/www/activity/redpacket/public/img/friends.png" class="responsive"/>
+                    </div>
+                    <div class="red-share-txt">朋友圈</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="app-page" data-page="bankset">
+    <div class="app-topbar bg-red">
+        <div class="app-button left" data-back></div>
+        <div class="app-title">提现信息设置</div>
+    </div>
+    <div class="app-content">
+        <form class="bank-form">
+            <fieldset>
+                <div class="control-group">
+                    <label class="control-label" for="name">姓名</label>
+                    <input type="text" class="control-input" id="name" placeholder="请输入姓名" required>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="identity">身份证</label>
+                    <input type="text" class="control-input" id="identity" placeholder="请输入身份证号" maxlength="18"
+                           required>
+                </div>
+                <div class="control-group">
+                    <label class="control-label" for="bank_list">账号类型</label>
+                    <select id="bank_list" class="control-input">
+                        <option>请选择银行</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <lable class="control-label" for="account">提现账号</lable>
+                    <input type="number" class="control-input" id="account" placeholder="请输入银行卡号" required>
+                </div>
+            </fieldset>
+            <div class="control-prompt">
+                <span class="icon-prompt"></span>
+                <small>为了保证您的账户安全，请填写和银行卡绑定的姓名和身份证号</small>
+            </div>
+            <div class="controls">
+                <a class="control-button app-button red">完成</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<div class="backdrop visible backdrop-loading active"></div>
+<div class="loading-container visible active">
+    <div class="loading"><span>请稍后...</span></div>
+</div>
+<div class="popup-container popup-showing active visible visiblehide">
+    <div class="popup">
+        <div class="popup-head"><h3 class="popup-title ng-binding">警告</h3></div>
+        <div class="popup-body"><span></span></div>
+        <div class="popup-buttons">
+            <button class="button ng-binding button-positive">确定</button>
+        </div>
+    </div>
+</div>
+
+<div class="red-modal-money hide">
+    <div class="red-modal-money-title">输入红包兑换码</div>
+    <div class="red-modal-money-line"></div>
+    <div class="red-modal-money-input">
+        <input type="tel" placeholder="请输入红包兑换码"/>
+    </div>
+    <div class="red-modal-money-error-g">
+        <p class="red-modal-money-error left">兑换码输入错误</p>
+        <a class="right redpacket-info-alert" href="/activity/redpacket/redguide.html">
+            <img src="data:image/jpg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAWABYDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3KR77xfqt5b2t5NY6DZyGGSSA7ZLqQfeAbso/X+Vaz8KeHbnVdTsNOTUbLUdP8vzLqO4YEl1LKQSxz054FaPwtYJ4X+yPxdWtzNFcA9Q+8nn8CKu6JZeR4u8S3X2q1k+0/Zv3McmZItsZHzj+HPUeooAqeHtVvLHU7nQ/EMyyXEMYmt7vG0TxZxk+jA4B/wAklc98UbWfVdf06y0st9shtpJZdvUIWUDP4g0UAdDrmi3thqU2ueHbmGC4dR9qtpwTFcAdG45De4/xzzGneObzUNUmtNL0bTrXVLgqstzJISHIGAThQTgdMmiigDtfDOg/2T9pury4a91S7Ia4uWXGcdFUdlFFFFAH/9k="/>
+            <p>使用说明</p>
+        </a>
+    </div>
+    <div class="red-modal-money-line"></div>
+    <div class="red-modal-money-btn-g row">
+        <a class="red-modal-money-btn left red-modal-money-btn-cancel">取消</a>
+        <a class="red-modal-money-btn right red-modal-money-btn-sure">确定</a>
+    </div>
+</div>
+<div class="row red-modal-share hide">
+    <div class="red-modal-share-close">
+        <img src="http://resourceh5.guozhongbao.com/www/activity/redpacket/public/img/close.png" class="right"/>
+    </div>
+    <div class="red-modal-share-go">
+        <div class="red-modal-share-btn"></div>
+    </div>
+</div>
+
+<script src="http://resourceh5.guozhongbao.com/www/activity/redpacket/public/js/lib/zepto.js"></script>
+<script src="http://resourceh5.guozhongbao.com/www/activity/redpacket/public/js/lib/app.min.js"></script>
+<script src="http://resourceh5.guozhongbao.com/www/activity/redpacket/public/js/config.js?v=1.2"></script>
+<script src="http://resourceh5.guozhongbao.com/www/activity/redpacket/public/js/init.js?v=1.2"></script>
+</body>
+</html>

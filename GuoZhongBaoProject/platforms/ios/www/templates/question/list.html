@@ -1,0 +1,16 @@
+<ion-view view-title="常见问题" class="question-wrapper">
+    <ion-content class="no-footer">
+        <ul class="list question-list">
+            <li class="question-item" ng-repeat="questionList in questionModel.lists">
+                <div class="question-title">
+                    <span class="question-index">问题{{$index+1}}：</span>
+                    {{ questionList.question }}
+                </div>
+                <div class="answer-content">
+                    <span class="answer-index">回答：</span>
+                    {{ questionList.answer }}
+                </div>
+            </li>
+        </ul>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  id="cordova-plugin-alipay"
+  version="1.0.0">
+  <name>AliPay</name>
+
+  <js-module src="www/alipay.js" name="AliPay">
+    <clobbers target="AliPay" />
+  </js-module>
+
+  <!-- ios -->
+  <platform name="ios">
+
+    <config-file target="*-Info.plist" parent="CFBundleURLTypes">
+        <array>
+        <dict>
+          <key>CFBundleTypeRole</key>
+          <string>Editor</string>
+          <key>CFBundleURLIconFile</key>
+          <string>icon-50@2x</string>
+          <key>CFBundleURLName</key>
+          <string>alipay</string>
+          <key>CFBundleURLSchemes</key>
+          <array>
+            <string>GZBIOSClient</string>
+          </array>
+        </dict>
+      </array>
+    </config-file>
+    
+    <config-file target="config.xml" parent="/*">
+      <feature name="AliPay">
+        <param name="ios-package" value="CDVAlipay" />
+        <param name="onload" value="true" />
+      </feature>
+      <preference name="AliPay" value="qdcalipay"/>
+    </config-file>
+
+    <header-file src="src/ios/CDVAlipayDefine.h" />
+    <header-file src="src/ios/CDVAlipay.h" />
+    <source-file src="src/ios/CDVAlipay.m" />
+    <header-file src="src/ios/CDVAlipayOrder.h" />
+    <source-file src="src/ios/CDVAlipayOrder.m" />
+    
+    <!-- copy bundle 文件 -->
+    <resource-file src="libs/ios/AlipaySDK.bundle" />
+    
+    <!-- copy lib 文件 -->
+    <source-file src="libs/ios/libssl.a" framework="true" />
+    <source-file src="libs/ios/libcrypto.a" framework="true" />
+    
+    <!-- afnetworking 依赖security.framework  -->
+    <framework src="Security.framework"/>
+    <framework src="SystemConfiguration.framework"/>
+    <framework src="AssetsLibrary.framework"/>
+    
+    <framework src="libs/ios/AlipaySDK.framework" custom="true" />
+  </platform>
+
+</plugin>

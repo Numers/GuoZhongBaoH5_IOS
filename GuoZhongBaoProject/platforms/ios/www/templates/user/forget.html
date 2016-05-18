@@ -1,0 +1,33 @@
+<ion-view view-title="设置新密码" class="forget-wrapper">
+    <ion-content>
+        <div class="forget-content">
+            <form name="forgetForm" class="forget-form">
+                <fieldset>
+                    <div class="control-group">
+                        <label class="control-label" for="phone">手机号</label>
+                        <input type="tel" id="phone" class="control-input-text" ng-model="forgetModel.phone" placeholder="请填写手机号">
+                    </div>
+                    <div class="control-group">
+                        <label for="captcha" class="control-label">验证码</label>
+                        <input type="text" name="captcha" id="captcha" class="control-input-text"
+                               ng-model="forgetModel.captcha" placeholder="请输入验证码">
+                        <button class="button control-small-button" ng-disabled="countdownModel.disabled" ng-click="getSmsCode()">
+                            {{ countdownModel.text }}
+                        </button>
+                    </div>
+                    <div class="control-group">
+                        <label for="password" class="control-label">新密码</label>
+                        <input type="password" name="password" id="password" class="control-input-text"
+                               ng-model="forgetModel.password" placeholder="请设置长度至少为6个字符的密码">
+                    </div>
+                </fieldset>
+                <div class="padding">
+                    <button type="button" class="button control-block-button" ng-disabled="buttonModel.load" ng-click="checkForm()">
+                        <i class="icon ion-load-c icon-loading" ng-show="buttonModel.load"></i>
+                        {{ buttonModel.text }}
+                    </button>
+                </div>
+            </form>
+        </div>
+    </ion-content>
+</ion-view>

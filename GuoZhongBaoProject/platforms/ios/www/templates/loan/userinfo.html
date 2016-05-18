@@ -1,0 +1,127 @@
+<ion-view title="基础资料" class="bgc-e9">
+    <ion-content id="userinfo-page" class="no-footer">
+        <form name="userinfo_form">
+            <div class="inputgroup">
+                <div class="userinfo-group">
+                    <label>姓名</label>
+                    <input type="text" placeholder="请输入姓名" ng-model="userInfo.name" required
+                           ng-change="hideWarning('name')" ng-disabled="disabledInfo.name"/>
+                </div>
+                <div class="userinfo-warnning {{showErrorInfo.name}}">
+                    <i class="ion-ios-information"></i>
+                    <span ng-bind="errorInfo.name"></span>
+                </div>
+
+                <div class="userinfo-group">
+                    <label>身份证号</label>
+                    <input type="text" placeholder="请输入身份证号" maxlength="18" required
+                           ng-model="userInfo.identity" ng-disabled="disabledInfo.identity"
+                           ng-change="hideWarning('identity')"/>
+                </div>
+                <div class="userinfo-warnning {{showErrorInfo.identity}}">
+                    <i class="ion-ios-information"></i>
+                    <span ng-bind="errorInfo.identity"></span>
+                </div>
+
+                <div class="userinfo-group" style="position: relative">
+                    <label>所属银行</label>
+                    <select class="bank-type" ng-model="userInfo.bankType" ng-style="banktype"
+                            ng-options="bank.id as bank.name group by bank.group for bank in bankData"
+                            ng-change="hideWarning('bank')" ng-disabled="disabledInfo.bank">
+                        <option value="" selected>请选择银行类型</option>
+                    </select>
+                    <i class="ion-ios-arrow-down"></i>
+                </div>
+                <div class="userinfo-warnning {{showErrorInfo.bank}}">
+                    <i class="ion-ios-information"></i>
+                    <span ng-bind="errorInfo.bank"></span>
+                </div>
+
+                <div class="userinfo-group">
+                    <label>银行卡号</label>
+                    <input type="text" placeholder="请输入银行卡号" ng-model="userInfo.card"
+                           required ng-change="hideWarning('card')" ng-disabled="disabledInfo.card"/>
+                </div>
+                <div class="userinfo-warnning {{showErrorInfo.card}}">
+                    <i class="ion-ios-information"></i>
+                    <span ng-bind="errorInfo.card"></span>
+                </div>
+
+                <div class="userinfo-group">
+                    <label>公司区域</label>
+                    <input type="text" placeholder="请点击" style="text-overflow: ellipsis"
+                           ng-disabled="disabledInfo.comaddress"
+                           ng-model="userInfo.companyAddress" ng-click="setAddress('company')" readonly required/>
+                    <i class="ion-ios-arrow-right"></i>
+                </div>
+
+                <div class="userinfo-warnning {{showErrorInfo.comaddress}}">
+                    <i class="ion-ios-information"></i>
+                    <span ng-bind="errorInfo.comaddress"></span>
+                </div>
+                <div class="userinfo-group">
+                    <label>公司名称</label>
+                    <input type="text" placeholder="请填写完整的公司名称" ng-model="userInfo.company"
+                           ng-change="hideWarning('company')" ng-disabled="disabledInfo.company" required/>
+                </div>
+                <div class="userinfo-warnning {{showErrorInfo.company}}">
+                    <i class="ion-ios-information"></i>
+                    <span ng-bind="errorInfo.company"></span>
+                </div>
+
+                <div class="userinfo-group" style="position: relative">
+                    <label>入职时间</label>
+                    <!--<input type="text" placeholder="请输入日期,如:2015-01-01" ng-model="userInfo.join_at"-->
+                    <!--ng-disabled="disabledInfo.join_at" ng-change="hideWarning('join_at')" required/>-->
+                    <!--<input type="date" id="workDate" placeholder="请选择" ng-style="workdate"-->
+                    <!--ng-disabled="disabledInfo.join_at" required/>-->
+                    <div class="date-mask" ng-show="disabledInfo.join_at"></div>
+                    <ionic-datepicker input-obj="datepickerObject">
+                        <input type="text" placeholder="请选择日期" readonly required
+                               ng-model="userInfo.join_at"/>
+                    </ionic-datepicker>
+                    <i class="ion-ios-arrow-down"></i>
+                </div>
+                <div class="userinfo-warnning {{showErrorInfo.join_at}}">
+                    <i class="ion-ios-information"></i>
+                    <span ng-bind="errorInfo.join_at"></span>
+                </div>
+
+                <div class="userinfo-group">
+                    <label>QQ号码</label>
+                    <input type="text" placeholder="请输入QQ号码" ng-model="userInfo.qq"
+                           ng-change="hideWarning('qq')" ng-disabled="disabledInfo.qq" required/>
+                </div>
+                <div class="userinfo-warnning {{showErrorInfo.qq}}">
+                    <i class="ion-ios-information"></i>
+                    <span ng-bind="errorInfo.qq"></span>
+                </div>
+
+                <div class="userinfo-group" style="border: 0;">
+                    <label>现居地址</label>
+                    <input type="text" placeholder="请点击" style="text-overflow: ellipsis"
+                           ng-disabled="disabledInfo.homeaddress"
+                           ng-click="setAddress('home')" ng-model="userInfo.homeAddress" readonly required/>
+                    <i class="ion-ios-arrow-right"></i>
+                </div>
+                <div class="userinfo-warnning {{showErrorInfo.homeaddress}}">
+                    <i class="ion-ios-information"></i>
+                    <span ng-bind="errorInfo.homeaddress"></span>
+                </div>
+            </div>
+            <div class="inputgroup" style="margin-top: 1rem;">
+                <div class="userinfo-group" style="border: 0;">
+                    <label>紧急联系人</label>
+                    <input type="text" placeholder="请输入联系电话" ng-model="userInfo.emergency_contact"
+                           ng-change="hideWarning('emergency_contact')" ng-disabled="disabledInfo.emergency_contact"
+                           required/>
+                </div>
+                <div class="userinfo-warnning {{showErrorInfo.emergency_contact}}">
+                    <i class="ion-ios-information"></i>
+                    <span ng-bind="errorInfo.emergency_contact"></span>
+                </div>
+            </div>
+            <input type="button" class="userinfo-submit button" ng-click="submit(userinfo_form.$valid)" value="下一步"/>
+        </form>
+    </ion-content>
+</ion-view>

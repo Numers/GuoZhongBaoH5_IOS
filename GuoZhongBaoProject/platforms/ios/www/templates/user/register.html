@@ -1,0 +1,39 @@
+<ion-view view-title="注册/登录" class="register-wrapper">
+    <ion-content>
+        <div class="register-logo">
+            <img ng-src="{{ registerModel.topPicUrl }}">
+        </div>
+        <form name="registerForm" class="register-form">
+            <div class="control-group">
+                <label for="captcha" class="control-label">验证码</label>
+                <input type="text" name="captcha" id="captcha" class="control-input-text control-top-radius"
+                       ng-model="registerModel.captcha" placeholder="请输入验证码">
+                <button class="button control-small-button" ng-disabled="countdownModel.disabled" ng-click="getSmsCode()">
+                    {{ countdownModel.text }}
+                </button>
+            </div>
+            <div class="control-group">
+                <label for="password" class="control-label">密码</label>
+                <input type="password" name="password" id="password" class="control-input-text" ng-class="{ 'control-bottom-radius': !registerModel.redeemShow }"
+                       ng-model="registerModel.password" placeholder="请设置密码，至少 6 位">
+            </div>
+            <div class="control-group" ng-show="registerModel.redeemShow">
+                <label for="redeem" class="control-label">兑换码</label>
+                <input type="text" name="redeem" id="redeem" class="control-input-text control-bottom-radius"
+                       ng-model="registerModel.redeem" placeholder="请输入邀请人兑换码">
+            </div>
+            <div class="item item-checkbox register-protocol">
+                <label class="checkbox control-checkbox-label">
+                    <input type="checkbox" class="control-checkbox" ng-checked="registerModel.agree"
+                           ng-click="registerModel.agree = !registerModel.agree">
+                </label>
+                <a class="link-text" ng-click="showAgreement()">注册协议</a>
+            </div>
+            <button type="button" class="button control-block-button"
+                    ng-disabled="buttonModel.load" ng-click="checkForm()">
+                <i class="icon ion-load-c icon-loading" ng-show="buttonModel.load"></i>
+                {{ buttonModel.text }}
+            </button>
+        </form>
+    </ion-content>
+</ion-view>

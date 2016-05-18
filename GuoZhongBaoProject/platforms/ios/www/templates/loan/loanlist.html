@@ -1,0 +1,27 @@
+<ion-view view-title="借款记录" hide-back-button="true" class="loanlist-wrapper">
+    <ion-content>
+        <div ng-show="!loanlistModel.empty">
+            <ul ng-show="loanlistModel.list.length">
+                <li class="loan-item" ng-repeat="item in loanlistModel.list">
+                    <div class="loan-date">申请日期：<em>{{ item.created_at.split(' ')[0] }}</em></div>
+                    <div class="loan-detail">
+                        <div class="loan-money">
+                            <strong class="">{{ item.price }}</strong>元
+                        </div>
+                        <div class="loan-status {{ handleLoanInfo(item.status).className }}">
+                            <div class="loan-status-inner">
+                                {{ handleLoanInfo(item.status).text }}
+                                <div class="loan-modify" ng-show="(item.status === 4 || item.status === 5)" ng-click="checkLoanInfo(item)">再次下单</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="loan-fail-prompt" ng-show="item.reason && (item.status === 4 || item.status === 5)">{{ item.reason }}</div>
+                </li>
+            </ul>
+        </div>
+        <div ng-show="loanlistModel.empty" class="loanlist-empty">
+            <img src="img/loan/logo.png">
+            <p>暂无借款记录</p>
+        </div>
+    </ion-content>
+</ion-view>

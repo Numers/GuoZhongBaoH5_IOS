@@ -1,0 +1,38 @@
+<ion-view view-title="注册/登录" class="login-wrapper" hide-back-button="true">
+    <ion-content>
+        <div class="login-content">
+            <div class="login-logo">
+                <img ng-src="{{ loginModel.topPicUrl }}">
+            </div>
+            <form name="loginForm" class="login-form">
+                <div ng-hide="loginModel.passwordShow">
+                    <div>
+                    <div class="control-group">
+                        <label class="control-label" for="phone">手机号</label>
+                        <input type="tel" id="phone" class="control-input-text control-radius" ng-model="loginModel.phone"
+                               placeholder="不论注册登录，先填写手机号">
+                    </div>
+                    </div>
+                    <button type="button" class="button control-block-button input-phone-button" ng-disabled="buttonModel.load" ng-click="checkPhone()">
+                        <i class="icon ion-load-c icon-loading" ng-show="buttonModel.load"></i>
+                        {{ buttonModel.text }}
+                    </button>
+                </div>
+                <div ng-hide="!loginModel.passwordShow">
+                    <div class="control-group">
+                        <label class="control-label" for="phone">密码</label>
+                        <input type="password" id="password" class="control-input-text control-radius" ng-model="loginModel.password"
+                               placeholder="请输入密码">
+                    </div>
+                    <div class="forget-text">
+                        <a href="#/user/forget">忘记密码？</a>
+                    </div>
+                    <button type="button" class="button control-block-button input-password-button" ng-disabled="buttonModel.load" ng-click="checkForm()">
+                        <i class="icon ion-load-c icon-loading" ng-show="buttonModel.load"></i>
+                        {{ buttonModel.text }}
+                    </button>
+                </div>
+            </form>
+        </div>
+    </ion-content>
+</ion-view>

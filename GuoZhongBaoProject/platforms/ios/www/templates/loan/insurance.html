@@ -1,0 +1,28 @@
+<ion-view view-title="我的社保记录" hide-back-button="true" class="bgc-e9">
+    <ion-nav-buttons side="left">
+        <a href="" on-tap="insuranceBack()" class="custom-back button button-icon icon ion-ios-arrow-back icon-home"></a>
+    </ion-nav-buttons>
+    <ion-content id="assetinfo-page" delegate-handle="mainScroll" class="no-footer">
+        <div class="assetinfo-content" id="assetinfo-content">
+            <div class="assetinfo-title">
+                <label>3-6个月的社保记录</label><span>(请保证照片上的数字清晰可辨认)</span>
+            </div>
+            <div class='assetinfo-bankwater' ng-repeat="pic in pictures">
+                <img ng-src={{pic.src}} alt=''/>
+                <i class='ion-ios-trash-outline' on-tap="deleteInsurance(pic.type)"></i>
+                <div class="bank-mask" ng-show="pic.isShow">
+                    <img class="pic-loading" src="img/loan/pic_loading.gif" alt=""/>
+                </div>
+            </div>
+        </div>
+        <div class="assetinfo-submit-group">
+            <div class="takepicture-left button" on-tap="takePicture()" ng-style="picBtn">
+                拍照上传
+            </div>
+            <div class="takepicture-right button" ng-hide="submitBtn" on-tap="submit()">
+                马上提交
+            </div>
+        </div>
+        <input id="takepicture" type="file" accept="image/*" capture="camera" style="display: none">
+    </ion-content>
+</ion-view>

@@ -1,0 +1,17 @@
+<ion-view title="银行卡一键支付">
+    <ion-content class="bank-wrapper">
+        <div class="bank-content">
+            <div class="bank-list" ng-show="bankListModel.list.length">
+                <div class="bank-item clearfix" ng-repeat="bankItem in bankListModel.list" ng-click="goPay(bankItem.protocolid, bankItem.cardno)">
+                    {{ bankItem.bankname }}
+                    <span class="ion-chevron-right"></span>
+                    <span class="text-right">尾号{{ bankItem.cardno.substr(-4) }}</span>
+                </div>
+            </div>
+            <a class="add-bank" ng-class="{'empty-bank': bankListModel.empty}" ng-click="addBankCard()">
+                <i class="ion-plus"></i>
+                添加银行卡
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

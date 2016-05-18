@@ -1,0 +1,74 @@
+{
+    "cordova-plugin-umpay": {
+        "source": {
+            "type": "local",
+            "path": "/Users/admin/Documents/gitPlugins/plugins-ios/cordova-plugin-umpay"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-userinfo": {
+        "source": {
+            "type": "local",
+            "path": "/Users/admin/Documents/gitPlugins/plugins-ios/cordova-plugin-userinfo"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-cookiestore": {
+        "source": {
+            "type": "local",
+            "path": "/Users/admin/Documents/gitPlugins/plugins-ios/cordova-plugin-cookiestore"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-camera": {
+        "source": {
+            "type": "local",
+            "path": "/Users/admin/Documents/gitPlugins/plugins-ios/cordova-plugin-overlaycamera"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-addressbook": {
+        "source": {
+            "type": "local",
+            "path": "/Users/admin/Documents/gitPlugins/plugins-ios/LocationAndAddressBook/cordova-plugin-addressbook"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-whitelist": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-whitelist@1"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-alipay": {
+        "source": {
+            "type": "local",
+            "path": "/Users/admin/Documents/gitPlugins/plugins-ios/cordova-plugin-alipay"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-location": {
+        "source": {
+            "type": "local",
+            "path": "/Users/admin/Documents/gitPlugins/plugins-ios/LocationAndAddressBook/cordova-plugin-location"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-share": {
+        "source": {
+            "type": "local",
+            "path": "/Users/admin/Documents/cordova-plugin-share"
+        },
+        "is_top_level": true,
+        "variables": {}
+    }
+}

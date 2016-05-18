@@ -1,0 +1,11 @@
+<ion-view view-title="意见反馈" class="feedback-wrapper">
+    <ion-content>
+        <form class="feedback-form">
+            <textarea class="control-input-area" ng-model="feedbackModel.text" placeholder="欢迎提出宝贵意见"></textarea>
+            <button class="button control-block-button" ng-disabled="buttonModel.load" ng-click="checkForm()">
+                <i class="icon ion-load-c icon-loading" ng-show="buttonModel.load"></i>
+                {{ buttonModel.text }}
+            </button>
+        </form>
+    </ion-content>
+</ion-view>

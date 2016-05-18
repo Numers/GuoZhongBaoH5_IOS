@@ -1,0 +1,1562 @@
+/*---------------------响应式布局------------------------*/
+html {
+    font-size: 10px;
+}
+
+@media screen and (min-width: 320px) and (max-width: 359px) {
+    html {
+        font-size: 10px
+    }
+}
+
+@media screen and (min-width: 360px) and (max-width: 374px) {
+    html {
+        font-size: 11.25px
+    }
+}
+
+@media screen and (min-width: 375px) and (max-width: 399px) {
+    html {
+        font-size: 11.75px
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 479px) {
+    html {
+        font-size: 12.5px
+    }
+}
+
+@media screen and (min-width: 480px) and (max-width: 539px) {
+    html {
+        font-size: 15px
+    }
+}
+
+@media screen and (min-width: 540px) {
+    html {
+        font-size: 16px
+    }
+}
+
+/*-------------页面特殊配置及公共配置区域----------------*/
+.button.button-positive {
+    background-color: #28b0e2;
+    border-color: #28b0e2;
+}
+
+.button.button-positive.activated, .button.button-positive.active {
+    background-color: #1cabe0;
+    border-color: #1cabe0;
+}
+
+/*隐藏底部tab使用*/
+.hidden {
+    visibility: hidden;
+}
+
+/*统一所有页面title字体为1.8rem按照响应式适配多种屏幕*/
+/*设置文字居中（针对安卓环境title靠左问题）*/
+.title {
+    font-size: 1.8rem !important;
+    text-align: center !important;
+}
+
+/*初始化scroll页面高度*/
+.scroll {
+    height: 100%;
+}
+
+/*页面背景颜色*/
+.pane {
+    /*background-color: #e9e9e9;*/
+}
+
+.show {
+    display: block !important;
+}
+
+.bgc-e9 {
+    background-color: #e9e9e9;
+}
+
+/*自定义返回按钮样式修复*/
+.custom-back {
+    padding: 0 !important;
+    margin-top: -2px !important;
+    color: #ffffff !important;
+}
+
+/*input样式特殊处理*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset;
+}
+.scroll-wrapper{
+    position: absolute; 
+    right: 0; 
+    bottom: 0; 
+    left: 0;
+    top: 0;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: scroll;
+}
+
+/*-------------bar,title,tab样式设置区域----------------*/
+
+.bar-userinfo .bar-stable {
+    background: #28b0e2;
+}
+
+.bar-userinfo .bar-stable .title {
+    color: #fff;
+}
+
+.bar-userinfo .bar-stable .button.button-clear {
+    color: #fff;
+}
+
+.no-footer {
+    bottom: 0;
+}
+
+/*--------------------- 基础资料页面样式设置 START ------------------------*/
+
+.inputgroup {
+    background-color: #FFFFFF;
+}
+
+.userinfo-group {
+    height: 4.4rem;
+    line-height: 4.4rem;
+    margin: 0 1.5rem;
+    border-bottom: #eeeeee solid 1px;
+}
+
+.userinfo-group i {
+    float: right;
+    color: #666;
+    font-size: 1.4rem;
+}
+
+.userinfo-group label {
+    display: inline-block;
+    min-width: 7rem;
+    font-size: 1.4rem;
+    color: #333;
+}
+
+.userinfo-group input {
+    display: table-cell;
+    width: 70%;
+    padding: 0;
+    font-size: 1.4rem;
+    background-color: transparent;
+}
+
+input[readonly] {
+    background-color: transparent !important;
+}
+
+input[disabled] {
+    /*color: #999;*/
+}
+
+select[disabled] {
+    color: #666 !important;
+    background-color: transparent !important;
+}
+
+.bank-type {
+    width: 70%;
+    height: 4.4rem;
+    line-height: 4.4rem;
+    font-size: 1.4rem;
+    padding: 0;
+    margin: 0;
+    color: #AAAAAA;
+    -webkit-appearance: none;
+    appearance: none;
+    border: transparent;
+    border: none;
+    display: inline;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: transparent;
+}
+
+.userinfo-submit {
+    border: 0;
+    border-radius: 2rem;
+    min-height: 4rem;
+    height: 4rem;
+    line-height: 4rem;
+    margin: 1.5rem;
+    font-size: 1.4rem;
+    width: 90%;
+    color: #fff;
+    background-color: #28B0E2;
+}
+
+.userinfo-submit.activated {
+    background-color: #7BD4F5;
+}
+
+#address-form {
+    background-color: #FFFFFF;
+}
+
+.areaList {
+    height: 4rem;
+    line-height: 4rem;
+    background-color: #fff;
+    padding: 0 1.5rem;
+    border-bottom: #dddddd solid 1px;
+}
+
+.areaList i {
+    float: right;
+}
+
+.submit-bottom-blue {
+    margin-top: 1.5rem;
+    width: 100%;
+}
+
+.submit-bottom-blue div {
+    height: 4rem;
+    line-height: 4rem;
+    margin: 0 1.5rem;
+    border-radius: 2rem;
+    font-size: 1.4rem;
+    color: #fff;
+    text-align: center;
+    background-color: #28B0E2;
+}
+
+.userinfo-warnning {
+    display: none;
+    background-color: #ff6000;
+    color: #ffffff;
+    padding-left: 1.5rem;
+}
+
+.userinfo-warnning i {
+    vertical-align: middle;
+}
+
+.userinfo-warnning span {
+    margin-left: 1rem;
+    font-size: 1.2rem;
+    vertical-align: middle;
+}
+
+.date-mask {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+}
+
+.popup-container .popup .popup-head {
+    padding-bottom: 0;
+}
+
+/*--------------------- 基础资料页面样式设置 END ------------------------*/
+
+/*--------------------- 安全认证页面样式设置 START ------------------------*/
+
+#safyinfo-page {
+    background-color: #FFFFFF;
+    text-shadow: none;
+}
+
+#safyinfo-page .scroll {
+    height: inherit;
+}
+
+.picture-content {
+    padding: 1.5rem 0;
+    border-bottom: #DDDDDD solid 1px;
+}
+
+.picture-left {
+    float: left;
+    padding-left: 4.75rem;
+}
+
+.picture-left label {
+    font-size: 1.5rem;
+}
+
+.picture-title {
+    font-size: 1.5rem;
+    color: #333333;
+}
+
+.picture-title-take:before {
+    content: '';
+    position: absolute;
+    left: 1.5rem;
+    width: 2rem;
+    height: 2rem;
+    background: url(../img/loan/pic_on.png);
+    background-size: 100%;
+}
+
+.picture-title-untake:before {
+    content: '';
+    position: absolute;
+    left: 1.5rem;
+    width: 2rem;
+    height: 2rem;
+    background: url(../img/loan/pic_off.png);
+    background-size: 100%;
+}
+
+.picture-text {
+    font-size: 1rem;
+    padding-bottom: .2rem;
+    color: #999999;
+}
+
+.picture-btn {
+    width: 6.5rem;
+    min-width: 6.5rem;
+    height: 2.25rem;
+    min-height: 2.25rem;
+    line-height: 2.25rem;
+    border: 0;
+    border-radius: 2rem;
+    text-align: center;
+    color: #fff;
+    background-color: #28b1e2;
+}
+
+.picture-btn.activated {
+    background-color: #7BD4F5;
+}
+
+.picture-right {
+    text-align: right;
+    margin-right: 1.5rem;
+}
+
+.picture-right img {
+    width: 8.6rem;
+    height: 6.4rem;
+}
+
+.picture-right .pic-mask {
+    display: none;
+    position: absolute;
+    width: 8.6rem;
+    height: 6.4rem;
+    right: 1.5rem;
+    background-color: #000;
+    filter: alpha(opacity=70);
+    -moz-opacity: 0.7;
+    opacity: 0.7;
+}
+
+.pic-errorText {
+    color: #ffffff;
+    font-size: 1rem;
+    width: 8.6rem;
+    height: 6.4rem;
+    line-height: 6.4rem;
+    text-align: center;
+}
+
+.picture-right .pic-loading {
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    right: 3.3rem;
+    top: 2.2rem;
+}
+
+.safyinfo-btn {
+    width: 100%;
+    font-size: 1.5rem;
+    border-radius: 3rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.safyinfo-submit {
+    border: 0;
+    color: #FFFFFF;
+    background-color: #ff6000;
+    min-width: 90%;
+    width: 90%;
+    min-height: 4rem;
+    height: 4rem;
+    line-height: 4rem;
+    border-radius: 2rem;
+    margin: 0 auto;
+}
+
+.safyinfo-submit.activated {
+    background-color: #FDA772;
+}
+
+/*--------------------- 安全认证页面样式设置 END ------------------------*/
+
+/*--------------------- 银行流水页面样式设置 START ------------------------*/
+
+.assetinfo-title {
+    height: 4.4rem;
+    line-height: 4.4rem;
+    background-color: #fff;
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+    border: #d8d8d8 solid 1px;
+}
+
+.assetinfo-title label {
+    font-size: 1.3rem;
+}
+
+.assetinfo-title span {
+    font-size: 1.1rem;
+    color: #999;
+    margin-left: .5rem;
+}
+
+.assetinfo-submit-group {
+    text-align: center;
+    margin-top: 2.5rem;
+    padding: 0 3rem;
+    height: 8rem;
+}
+
+.assetinfo-bankwater {
+    position: relative;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border: #d8d8d8 solid 1px;
+    margin-bottom: 1rem;
+}
+
+.assetinfo-bankwater img {
+    width: 21rem;
+    height: 15rem;
+    margin-right: 3rem;
+    vertical-align: middle;
+}
+
+.assetinfo-bankwater i {
+    font-size: 4rem;
+    vertical-align: middle;
+}
+
+.assetinfo-bankwater .bank-mask {
+    position: absolute;
+    top: 1.5rem;
+    width: 21rem;
+    height: 15rem;
+    line-height: 15rem;
+    text-align: center;
+    background-color: #000;
+    opacity: 0.7;
+}
+
+.assetinfo-bankwater .bank-mask img {
+    width: 3rem;
+    height: 3rem;
+    margin: 0;
+}
+
+.assetinfo-submit-group .takepicture-left {
+    margin: 0 auto;
+    border: 0;
+    width: 12rem;
+    height: 4rem;
+    min-height: 4rem;
+    line-height: 4rem;
+    border-radius: 2rem;
+    font-size: 1.4rem;
+    text-align: center;
+    color: #ffffff;
+    background-color: #01d89f;
+}
+
+.takepicture-left.activated {
+    background-color: #77DCC1;
+}
+
+.assetinfo-submit-group .takepicture-right {
+    float: right;
+    margin: 0 auto;
+    border: 0;
+    width: 12rem;
+    height: 4rem;
+    min-height: 4rem;
+    line-height: 4rem;
+    border-radius: 2rem;
+    font-size: 1.4rem;
+    text-align: center;
+    color: #ffffff;
+    background-color: #ff6600;
+}
+
+.takepicture-right.activated {
+    background-color: #FDA772;
+}
+
+/*--------------------- 银行流水页面样式设置 END ------------------------*/
+
+/*--------------------- home START ------------------------*/
+.icon-loan,
+.icon-loan-on,
+.icon-repayment,
+.icon-repayment-on,
+.icon-user,
+.icon-user-on {
+    display: inline-block;
+    width: 3.2rem;
+    height: 3.2rem;
+    background: no-repeat center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+}
+
+.icon-loan {
+    background-image: url(../img/user/icon_loan.png);
+}
+
+.icon-loan-on {
+    background-image: url(../img/user/icon_loan_on.png);
+}
+
+.icon-loan-on + .tab-title,
+.icon-repayment-on + .tab-title,
+.icon-user-on + .tab-title {
+    color: #28b1e2;
+}
+
+.icon-repayment {
+    background-image: url(../img/user/icon_repayment.png);
+}
+
+.icon-repayment-on {
+    background-image: url(../img/user/icon_repayment_on.png);
+}
+
+.icon-user {
+    background-image: url(../img/user/icon_user.png);
+}
+
+.icon-user-on {
+    background-image: url(../img/user/icon_user_on.png);
+}
+
+/*--------------------- home END ------------------------*/
+
+/*--------------------- login & register START ------------------------*/
+.login-wrapper,
+.register-wrapper {
+    background: #28b1e2;
+    font-family: "Microsoft Yahei", "微软雅黑", Helvetica, sans-serif;
+}
+
+.login-logo,
+.register-logo {
+    width: 100%;
+    height: 110px;
+    margin: 50px auto 25px;
+    text-align: center;
+}
+
+.login-logo img,
+.register-logo img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.login-form,
+.register-form {
+    margin: 0 1.6rem;
+}
+
+.login-form input,
+.login-form button,
+.register-form input,
+.register-form button {
+    font-family: "Microsoft Yahei", "微软雅黑", Helvetica, sans-serif;
+}
+
+.forget-form fieldset,
+.update-form fieldset {
+    padding: 0;
+    margin: 1.6rem 0 0;
+    border: 1px solid #ddd;
+}
+
+.forget-form .control-group,
+.update-form .control-group {
+    padding: 0 0 0 1.6rem;
+    background: #fff;
+}
+
+.login-form .control-group,
+.register-form .control-group,
+.forget-form .control-group,
+.update-form .control-group {
+    position: relative;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.login-form .control-label,
+.register-form .control-label,
+.forget-form .control-label,
+.update-form .control-label {
+    position: absolute;
+    top: 1.5rem;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    width: 6rem;
+    line-height: 1;
+    font-size: 1.4rem;
+    color: #888;
+    text-align: left;
+}
+
+.login-form .control-block-button,
+.register-form .control-block-button,
+.forget-form .control-block-button,
+.update-form .control-block-button {
+    width: 100%;
+    height: 4rem;
+    min-height: 4rem;
+    line-height: 4rem;
+    color: #fff;
+    background: #ff6700;
+    font-size: 1.8rem;
+    border: 0;
+    border-radius: 20px;
+}
+
+.forget-form .control-block-button {
+
+}
+
+.register-form .control-small-button,
+.forget-form .control-small-button,
+.update-form .control-small-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 12rem;
+    height: 4.4rem;
+    min-height: 4.4rem;
+    padding: 0;
+    line-height: 4.4rem;
+    font-size: 1.5rem;
+    color: #333;
+    text-align: center;
+    background: #f4f4f4;
+    border: 0;
+}
+
+.register-form .control-small-button,
+.forget-form .control-small-button {
+    border-bottom: 1px solid #ddd;
+}
+
+.update-form .prompt {
+    font-size: 1.2rem;
+    color: #999;
+}
+
+.forget-text {
+    margin: 1.5rem 0;
+    line-height: 1;
+    font-size: 1.2rem;
+    text-align: right;
+}
+
+.forget-text a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.input-phone-button {
+    margin-top: 25px;
+}
+
+.login-form .control-input-text,
+.register-form .control-input-text,
+.forget-form .control-input-text,
+.update-form .control-input-text {
+    width: 100%;
+    height: 4.4rem;
+    padding: 1.5rem 0 1.5rem 7.5rem;
+    line-height: normal;
+    font-size: 1.4rem;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+}
+
+.forget-form .control-group:last-child .control-input-text,
+.update-form .control-group:last-child .control-input-text {
+    border-bottom: 0;
+}
+
+.login-form .control-radius {
+    border-radius: 5px;
+}
+
+.register-form .control-top-radius {
+    border-radius: 5px 5px 0 0;
+}
+
+.register-form .control-bottom-radius {
+    border-radius: 0 0 5px 5px;
+}
+
+.register-form .register-protocol {
+    margin-top: 9px;
+    background-color: transparent;
+    border: 0;
+}
+
+.register-form .link-text {
+    margin-left: -10px;
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.register-form .control-block-button {
+    margin: -6px 0 0;
+}
+
+.register-form .control-checkbox-label {
+    width: 40px;
+}
+
+.register-form .control-checkbox {
+    -webkit-transform: scale(.5);
+    -moz-transform: scale(.5);
+    -ms-transform: scale(.5);
+    -o-transform: scale(.5);
+    transform: scale(.5);
+}
+
+.register-form .control-checkbox:checked:before {
+    background: #ff6700;
+    border-color: #ff6700;
+}
+
+/*--------------------- login & register END ------------------------*/
+
+/*--------------------- graph code popup START ------------------------*/
+.dialog-mask {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .8;
+}
+
+.dialog-popup {
+    position: fixed;
+    top: 15rem;
+    right: 0;
+    left: 0;
+    z-index: 101;
+    width: 28rem;
+    height: 27rem;
+    margin: 0 auto;
+    text-align: center;
+    background: #28b1e2;
+    border-radius: 10px;
+}
+
+.dialog-header h3 {
+    padding: 0 0 1.1rem 0;
+    margin: 1.8rem 2.2rem 0;
+    line-height: 1;
+    color: #fff;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #fff;
+}
+
+.dialog-body {
+    margin: 1.6rem 0 0;
+}
+
+.dialog-body .graph-code-image {
+    width: 22rem;
+    height: 8rem;
+    vertical-align: bottom;
+}
+
+.dialog-body .graph-code-solution {
+    width: 22rem;
+    margin: 1.5rem auto 0;
+    color: #fff;
+}
+
+.dialog-body .dialog-control-label {
+    float: left;
+    width: 8rem;
+    height: 3.7rem;
+    line-height: 3.7rem;
+}
+
+.dialog-body .dialog-control-input {
+    float: left;
+    width: 14rem;
+    height: 3.7rem;
+    padding: 0 0 0 5px;
+    border-radius: 5px;
+}
+
+.dialog-body .graph-code-prompt {
+    height: 2.3rem;
+    margin: 0;
+    line-height: 2.3rem;
+    color: #fff;
+}
+
+.dialog-footer .dialog-control-button {
+    width: 16.5rem;
+    height: 3.5rem;
+    margin: 0 auto;
+    color: #fff;
+    background: #ff6700;
+    border: 0;
+    border-radius: 20px;
+}
+
+/*--------------------- graph code popup END ------------------------*/
+
+/*--------------------- user START ------------------------*/
+.user-info-icon,
+.user-loanlist-icon,
+.user-wallet-icon,
+.user-faq-icon,
+.user-about-icon {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    vertical-align: bottom;
+}
+
+.user-info-icon {
+    background: url(../img/user/user_info_icon.png);
+    background-size: cover;
+}
+
+.user-loanlist-icon {
+    background: url(../img/user/user_loanlist_icon.png);
+    background-size: cover;
+}
+
+.user-wallet-icon {
+    background: url(../img/user/user_wallet_icon.png);
+    background-size: cover;
+}
+
+.user-faq-icon {
+    background: url(../img/user/user_faq_icon.png);
+    background-size: cover;
+}
+
+.user-about-icon {
+    background: url(../img/user/user_about_icon.png);
+    background-size: cover;
+}
+
+/*--------------------- loan END ------------------------*/
+
+.user-wrapper .ion-chevron-right,
+.account-wrapper .ion-chevron-right,
+.about-wrapper .ion-chevron-right,
+.bank-wrapper .ion-chevron-right {
+    float: right;
+    color: #a9a9a9;
+}
+
+.user-wrapper,
+.account-wrapper,
+.forget-wrapper,
+.wallet-wrapper,
+.loanlist-wrapper,
+.question-wrapper,
+.about-wrapper,
+.feedback-wrapper {
+    background: #e9e9e9;
+}
+
+.user-content .profile {
+    padding: 1.5rem;
+    text-align: center;
+    background: #fff;
+}
+
+.profile .avatar {
+    float: left;
+    width: 6rem;
+    height: 6rem;
+}
+
+.profile .phone {
+    float: left;
+    width: 10rem;
+    height: 6rem;
+    margin-left: 1.5rem;
+    line-height: 6rem;
+    text-align: left;
+}
+
+.profile .account-setting {
+    float: right;
+    width: 10rem;
+    height: 6rem;
+    line-height: 6rem;
+    color: #a9a9a9;
+    text-decoration: none;
+    text-align: right;
+}
+
+.user-content .avatar img {
+    max-width: 100%;
+}
+
+.account-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.account-content .scroll {
+    -webkit-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -o-transform: none !important;
+    transform: none !important;
+}
+
+.account-list,
+.user-list,
+.about-list {
+    padding: 0;
+    margin-top: 1.6rem;
+    background: #fff;
+}
+
+.account-item,
+.user-item,
+.about-item {
+    padding: 1.4rem 1.6rem;
+    line-height: 1;
+    color: #888;
+    font-size: 1.6rem;
+    border: 0;
+}
+
+.account-item:not(:first-child),
+.user-item:not(:first-child),
+.about-item:not(:first-child) {
+    border-top: 1px solid #d8d8d8;
+}
+
+.account-content .control-block-button {
+    position: absolute;
+    right: 0;
+    bottom: 7.5rem;
+    left: 0;
+    width: 90%;
+    height: 42px;
+    min-height: 42px;
+    margin: 0 auto;
+    color: #ff7c10;
+    background: #e9e9e9;
+    border: 1px solid #ff7c10;
+    border-radius: 20px;
+}
+
+.wallet-content .cash {
+    padding-bottom: 1.6rem;
+    text-align: center;
+    color: #fff;
+    background: #ff7c10;
+}
+
+.wallet-content .cash-title {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.wallet-content .cash-amount {
+    margin-top: .4rem;
+    line-height: 1;
+    font-size: 5rem;
+}
+
+.wallet-content .cash-usage {
+    width: 50%;
+    margin: 1.1rem auto 0;
+    font-size: 1.2rem;
+    border: 1px dashed #fff;
+    border-radius: 10px;
+}
+
+.wallet-content .coupon-list {
+    margin: 1.6rem 0;
+}
+
+.wallet-content .coupon-item {
+    height: 7rem;
+    margin: 0 0 1.6rem 0;
+    background: url(../img/user/wallet_bg.png) no-repeat;
+}
+
+.wallet-content .coupon-amount {
+    float: left;
+    width: 8rem;
+    height: 7rem;
+    margin: 0 0 0 1.6rem;
+    line-height: 7rem;
+    color: #ffb94b;
+    font-size: 3.5rem;
+}
+
+.wallet-content .coupon-detail {
+    float: left;
+    width: 20rem;
+    margin: 2rem 0 1.5rem;
+}
+
+.wallet-content .coupon-type {
+    float: left;
+    color: #ffb94b;
+    font-size: 2rem;
+}
+
+.wallet-content .coupon-usage {
+    float: left;
+    width: 12rem;
+    margin: 0 0 0 .7rem;
+    color: #ffb94b;
+    font-size: 1rem;
+}
+
+.wallet-content .coupon-expire {
+    margin-top: .5rem;
+    color: #afafaf;
+    font-size: 1rem;
+}
+
+.question-list {
+
+}
+
+.question-item {
+    padding: 1.8rem 0 1.5rem 1.6rem;
+    margin-bottom: 1.2rem;
+    background: #fff;
+}
+
+.question-item .question-title {
+    padding-bottom: 1.2rem;
+    line-height: 1;
+    color: #666;
+    font-size: 1.4rem;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.question-item .question-index {
+    color: #28b1e2;
+}
+
+.question-item .answer-content {
+    padding-top: 1rem;
+    line-height: 1.5;
+    color: #999;
+    font-size: 1.4rem;
+}
+
+.question-item .answer-index {
+    color: #ff6700;
+}
+
+.about-content {
+    color: #333;
+    text-align: center;
+}
+
+.about-content img {
+    width: 6rem;
+    height: 6rem;
+    margin-top: 1.5rem;
+}
+
+.feedback-form {
+    margin: 0 1.6rem;
+}
+
+.feedback-form .control-input-area {
+    width: 100%;
+    height: 15rem;
+    padding: 1.6rem;
+    margin: 1.6rem 0;
+    border-radius: 5px;
+}
+
+.feedback-form .control-block-button {
+    width: 100%;
+    height: 4rem;
+    line-height: 4rem;
+    min-height: 4rem;
+    border-radius: 5px;
+    color: #fff;
+    background: #28b1e2;
+    border: 0;
+}
+
+.loan-item {
+    padding: 0;
+    margin: 0 0 1.2rem 0;
+    background: #fff;
+    border: 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.loan-item .loan-date {
+    margin: 0 0 0 1.6rem;
+    line-height: 3.6rem;
+    font-size: 1.4rem;
+    color: #999;
+    border-bottom: 1px solid #ddd;
+}
+
+.loan-item .loan-date em {
+    color: #333;
+}
+
+.loan-item .loan-detail {
+    position: relative;
+    margin: 0 0 0 1.6rem;
+    line-height: 6rem;
+}
+
+.loan-item .loan-money {
+    color: #ff6700;
+    font-size: 1.2rem;
+    vertical-align: bottom;
+}
+
+.loan-item .loan-money strong {
+    padding: 0 5px 0 0;
+    font-size: 2.2rem;
+    vertical-align: middle;
+}
+
+.loan-item .loan-status {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 8rem;
+    height: 6rem;
+    line-height: 1;
+    margin: 0 1.6rem 0 0;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.loan-item .loan-status-inner {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 100%;
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+}
+
+.loan-item .loan-modify {
+    margin: 7px 0 0 0;
+    line-height: 2.5rem;
+    color: #fff;
+    background: #ff6600;
+    border-radius: 15px;
+}
+
+.loan-item .loan-success {
+    color: #ff6700;
+}
+
+.loan-item .loan-progress {
+    color: #28b1e2;
+}
+
+.loan-item .loan-fail-prompt {
+    padding: 0 0 0 1.6rem;
+    line-height: 2.5rem;
+    color: #fff;
+    background: #ff6700;
+}
+
+.loanlist-empty img {
+    width: 6rem;
+    margin: 10px;
+}
+
+.loanlist-empty {
+    text-align: center;
+}
+
+/*--------------------- user END ------------------------*/
+/*--------------------- repayment START ------------------------*/
+.repayment-wrapper {
+    background: #fff;
+}
+
+.repayment-content .repayment-top {
+    padding-bottom: 1.6rem;
+    text-align: center;
+    color: #fff;
+    background: #28b1e2;
+}
+
+.repayment-content .repayment-text {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.repayment-content .repayment-amount {
+    margin-top: .4rem;
+    line-height: 1;
+    font-size: 5rem;
+}
+
+.repayment-content .repayment-date {
+    width: 50%;
+    margin: 1.1rem auto 0;
+    font-size: 1.2rem;
+    border: 1px dashed #fff;
+    border-radius: 10px;
+}
+
+.repayment-detail-item {
+    float: left;
+    width: 25%;
+    padding: 1.5rem 0;
+    text-align: center;
+    border-bottom: 1px solid #dcdcdc;
+    background: #fff;
+}
+
+.repayment-detail-inner {
+    border-right: 1px solid #ddd;
+}
+
+.repayment-detail-top {
+    color: #999;
+    font-size: 1.2rem;
+}
+
+.repayment-detail-down {
+    color: #333;
+    font-size: 1.4rem;
+}
+
+.repayment-detail-item:nth-child(2n) .repayment-detail-down {
+    color: #ff6700;
+}
+
+.repayment-content .control-block-button {
+    width: 100%;
+    height: 4rem;
+    min-height: 4rem;
+    margin-top: 10px;
+    line-height: 4rem;
+    color: #fff;
+    font-size: 1.8rem;
+    border: 0;
+    border-radius: 20px;
+}
+
+.repayment-content .repayment-overdue {
+    background: #01d89f;
+}
+
+.repayment-content .repayment-current {
+    background: #ff6700;
+}
+
+.repayment-content .repayment-all {
+    background: #28b1e2;
+}
+
+.repayment-content .repayment-empty {
+    background: #ababab;
+}
+
+.payment-content .payment-amount {
+    height: 7rem;
+    padding: 0 1.6rem;
+    margin: 0 0 1.2rem 0;
+    line-height: 7rem;
+    background: #fff;
+}
+
+.payment-content .payment-amount-text {
+    font-size: 1.4rem;
+    color: #999;
+}
+
+.payment-content .payment-amount-money {
+    float: right;
+    font-size: 2.2rem;
+    color: #ff6700;
+}
+
+.payment-content .payment-list {
+    background: #fff;
+}
+
+.payment-content .payment-item a {
+    display: block;
+    padding: 1.4rem 1.6rem;
+    line-height: 1;
+    font-size: 1.6rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.payment-content .payment-item img {
+    width: 6rem;
+    height: 1.6rem;
+}
+
+.bank-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.bank-content .add-bank {
+    display: block;
+    height: 3rem;
+    padding: 0 0 0 1.6rem;
+    line-height: 3rem;
+    font-size: 1.4rem;
+    color: #fff;
+    text-decoration: none;
+    background: #e2b9bd;
+}
+
+.bank-content .empty-bank {
+    color: #999;
+    background: #fff;
+}
+
+.bank-wrapper .control-block-button {
+    position: absolute;
+    right: 0;
+    bottom: 10rem;
+    left: 0;
+    width: 90%;
+    height: 42px;
+    min-height: 42px;
+    margin: 0 auto;
+    color: #fff;
+    background: #ff6700;
+    border: 1px solid #ff6700;
+    border-radius: 20px;
+}
+
+.bank-item {
+    padding: 0 1.6rem;
+    line-height: 4.4rem;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.bank-item .text-right {
+    float: right;
+    margin: 0 20px 0 0;
+}
+
+.bank-form,
+.pay-form {
+    padding: 1.2rem 0;
+}
+
+.bank-form .control-group,
+.pay-form .control-group {
+    position: relative;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.bank-form .control-label,
+.pay-form .control-label {
+    display: inline-block;
+    width: 8rem;
+    height: 4.4rem;
+    line-height: 4.4rem;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.bank-form .control-input-text,
+.pay-form .control-input-text {
+    display: inline-block;
+    width: 16rem;
+    height: 4.4rem;
+    padding: 1.5rem 0;
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.pay-form .control-small-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 12rem;
+    height: 4.4rem;
+    min-height: 4.4rem;
+    padding: 0;
+    line-height: 4.4rem;
+    font-size: 1.5rem;
+    color: #333;
+    text-align: center;
+    background: #f4f4f4;
+    border: 0;
+}
+
+.bank-form .link-text {
+    margin-left: -10px;
+    color: #888;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.bank-form .bank-protocol {
+    background: transparent;
+    border: 0;
+}
+
+.bank-form .control-checkbox-label {
+    width: 40px;
+}
+
+.bank-form .control-checkbox {
+    -webkit-transform: scale(.5);
+    -moz-transform: scale(.5);
+    -ms-transform: scale(.5);
+    -o-transform: scale(.5);
+    transform: scale(.5);
+}
+
+.bank-form .control-checkbox:checked:before {
+    background: #28b1e2;
+    border-color: #28b1e2;
+}
+
+.bank-form .control-block-button,
+.pay-form .control-block-button {
+    width: 100%;
+    height: 4rem;
+    min-height: 4rem;
+    line-height: 4rem;
+    color: #fff;
+    background: #ff6700;
+    font-size: 1.8rem;
+    border: 0;
+    border-radius: 20px;
+}
+
+.bank-form .control-block-button {
+    margin: -20px 0 0;
+}
+
+/*--------------------- repayment END ------------------------*/
+
+/*--------------------- common config START ------------------------*/
+.bar-repayment .bar-stable,
+.bar-repay .bar-stable,
+.bar-pay .bar-stable,
+.bar-bank .bar-stable,
+.bar-login .bar-stable,
+.bar-register .bar-stable,
+.bar-user .bar-stable,
+.bar-loan .bar-stable,
+.bar-question .bar-stable,
+.bar-about .bar-stable,
+.bar-feedback .bar-stable {
+    background: #28b1e2;
+}
+
+.bar-repayment .bar-stable .title,
+.bar-repay .bar-stable .title,
+.bar-pay .bar-stable .title,
+.bar-bank .bar-stable .title,
+.bar-login .bar-stable .title,
+.bar-register .bar-stable .title,
+.bar-user .bar-stable .title,
+.bar-loan .bar-stable .title,
+.bar-question .bar-stable .title,
+.bar-about .bar-stable .title,
+.bar-feedback .bar-stable .title {
+    color: #fff;
+}
+
+.bar-repayment .bar-stable .button.button-clear,
+.bar-repay .bar-stable .button.button-clear,
+.bar-pay .bar-stable .button.button-clear,
+.bar-bank .bar-stable .button.button-clear,
+.bar-login .bar-stable .button.button-clear,
+.bar-register .bar-stable .button.button-clear,
+.bar-user .bar-stable .button.button-clear,
+.bar-user .icon,
+.bar-loan .bar-stable .button.button-clear,
+.bar-question .bar-stable .button.button-clear,
+.bar-about .bar-stable .button.button-clear,
+.bar-feedback .bar-stable .button.button-clear {
+    color: #fff;
+}
+
+.bar-wallet .bar-stable,
+.bar-account .bar-stable,
+.bar-forget .bar-stable,
+.bar-update .bar-stable {
+    background: #ff7c10;
+}
+
+.bar-wallet .bar-stable .title,
+.bar-account .bar-stable .title,
+.bar-forget .bar-stable .title,
+.bar-update .bar-stable .title {
+    color: #fff;
+}
+
+.bar-wallet .bar-stable .button.button-clear,
+.bar-account .bar-stable .button.button-clear,
+.bar-forget .bar-stable .button.button-clear,
+.bar-update .bar-stable .button.button-clear {
+    color: #fff;
+}
+
+/*--------------------- common config END ------------------------*/

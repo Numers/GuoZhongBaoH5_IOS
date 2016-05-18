@@ -1,0 +1,51 @@
+<ion-view view-title="借款确认" class="apply-content" hide-back-button="true">
+    <ion-nav-buttons side="left">
+        <a href="#/home" class="custom-back button button-icon icon ion-ios-arrow-back icon-home"></a>
+    </ion-nav-buttons>
+    <ion-content class="loan-content">
+        <ul class="loan-info clearfix">
+            <li>
+                <span>借款金额</span>
+                <span>{{applyData.credit}}</span>
+            </li>
+            <li>
+                <span>借款时间</span>
+                <span>{{applyData.time}}</span>
+            </li>
+            <li>
+                <span>借款手续费</span>
+                <span>{{applyData.interest}}</span>
+            </li>
+            <li>
+                <span>实际到账金额</span>
+                <span>{{applyData.realLoan}}</span>
+            </li>
+        </ul>
+
+        <div class="blank-box"></div>
+
+        <ul class="loan-list clearfix" ng-repeat="repayment in repaymentData">
+            <li>
+                <span>还款日</span>
+                <span>{{repayment.time}}</span>
+            </li>
+            <li>
+                <span>还款金额</span>
+                <span>{{repayment.credit}}</span>
+            </li>
+        </ul>
+        <p class="loan-tip">提醒：若非当日打款，还款日以还款界面为准</p>
+
+        <div class="blank-box"></div>
+
+        <div class="item loan-checkbox">
+            <label class="checkbox">
+                <input type="checkbox" ng-checked="applyData.agree" ng-click="applyModel.agree = !applyModel.agree">
+            </label>
+            <a class="link-text" ng-click="showAgreement()">同意借款协议</a>
+        </div>
+
+        <button class="button button-orange" ng-click="apply()">快速借款</button>
+        <div class="blank-box"></div>
+    </ion-content>
+</ion-view>

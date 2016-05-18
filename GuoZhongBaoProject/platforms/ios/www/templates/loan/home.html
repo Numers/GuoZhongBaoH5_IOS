@@ -1,0 +1,32 @@
+<ion-view view-title="国众宝" hide-back-button="true" cache-view="false">
+    <ion-nav-buttons side="left">
+        <a href="tel:4007801155" class="button button-icon icon ion-ios-telephone-outline"></a>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <a href="#/questions" class="button button-icon icon ion-ios-help-outline"></a>
+    </ion-nav-buttons>
+    <ion-content>
+        <ion-slide-box>
+            <ion-slide ng-repeat="banner in banners">
+                <a href="" class="block-width" ng-click="preGo(banner.url, banner.title)">
+                    <img ng-src="{{banner.picurl}}">
+                </a>
+            </ion-slide>
+        </ion-slide-box>
+
+        <ul class="{{menuClass.menu}}">
+            <li ng-click="switchMenu(0)" class="{{menuClass.period}}">短期周转</li>
+            <li ng-click="switchMenu(1)" class="{{menuClass.stage}}">分期借款</li>
+        </ul>
+        <div id="topLoader"></div>
+
+        <div><input type="hidden" id="chart_slider"/></div>
+
+        <div class="home-text">
+            <p ng-bind-html="innerText"></p>
+        </div>
+
+        <button class="button button-orange" ng-click="loan()">快速借款</button>
+        <br/>
+    </ion-content>
+</ion-view>

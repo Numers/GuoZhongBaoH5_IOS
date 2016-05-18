@@ -1,0 +1,22 @@
+<ion-view title="还款">
+    <ion-content>
+        <div class="payment-content">
+            <div class="payment-amount">
+                <span class="payment-amount-text">应还款额</span>
+                <span class="payment-amount-money">{{ repayModel.money }}</span>
+            </div>
+            <ul class="payment-list">
+                <li class="payment-item">
+                    <a ng-click="alipay()">
+                        <img src="img/payment/alipay.png" alt="alipay">
+                    </a>
+                </li>
+                <li class="payment-item">
+                    <a href="#/repayment/bank">
+                        <img src="img/payment/quickpass.png" alt="quick pass">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </ion-content>
+</ion-view>

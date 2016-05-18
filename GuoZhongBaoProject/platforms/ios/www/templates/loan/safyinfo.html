@@ -1,0 +1,87 @@
+<ion-view view-title="安全认证" class="bgc-e9">
+    <ion-content id="safyinfo-page" class="no-footer">
+        <div class="safyinfo-content">
+            <div class="picture-content">
+                <div class="picture-left">
+                    <label ng-class="pictureObj.pic0.title">身份证正面</label>
+
+                    <div class="picture-text">请保证姓名、身份证拍摄清晰</div>
+
+                    <div class="picture-btn button" ng-style="pictureObj.pic0.btnStyle" ng-click="takePicture(0)"
+                         ng-bind="pictureObj.pic0.btn"></div>
+                </div>
+                <div class="picture-right">
+                    <div class="pic-mask" ng-style="pictureObj.pic0.mask">
+                        <img class="pic-loading" ng-show="pictureObj.pic0.loading" src="img/loan/pic_loading.gif"
+                             alt=""/>
+
+                        <div class="pic-errorText" ng-show="errorInfo.pic0" ng-bind="errorInfo.pic0"></div>
+                    </div>
+                    <img class="img-pic" data-type="0" src="{{pictureObj.pic0.src}}" alt=""/>
+                </div>
+            </div>
+            <div class="picture-content">
+                <div class="picture-left">
+                    <label ng-class="pictureObj.pic1.title">身份证反面</label>
+
+                    <div class="picture-text">请保证签发机关、有限期限拍摄清晰</div>
+
+                    <div class="picture-btn button" ng-style="pictureObj.pic1.btnStyle" ng-click="takePicture(1)"
+                         ng-bind="pictureObj.pic1.btn"></div>
+                </div>
+                <div class="picture-right">
+                    <div class="pic-mask" ng-style="pictureObj.pic1.mask">
+                        <img class="pic-loading" ng-show="pictureObj.pic1.loading" src="img/loan/pic_loading.gif"
+                             alt=""/>
+
+                        <div class="pic-errorText" ng-show="errorInfo.pic1" ng-bind="errorInfo.pic1"></div>
+                    </div>
+                    <img class="img-pic" data-type="1" src="{{pictureObj.pic1.src}}" alt=""/>
+                </div>
+            </div>
+            <div class="picture-content">
+                <div class="picture-left">
+                    <label ng-class="pictureObj.pic2.title">手持身份证照</label>
+
+                    <div class="picture-text">请保证面部、文字拍摄清晰无遮挡</div>
+
+                    <div class="picture-btn button" ng-style="pictureObj.pic2.btnStyle" ng-click="takePicture(2)"
+                         ng-bind="pictureObj.pic2.btn"></div>
+                </div>
+                <div class="picture-right">
+                    <div class="pic-mask" ng-style="pictureObj.pic2.mask">
+                        <img class="pic-loading" ng-show="pictureObj.pic2.loading" src="img/loan/pic_loading.gif"
+                             alt=""/>
+
+                        <div class="pic-errorText" ng-show="errorInfo.pic2" ng-bind="errorInfo.pic2"></div>
+                    </div>
+                    <img class="img-pic" data-type="2" src="{{pictureObj.pic2.src}}" alt=""/>
+                </div>
+            </div>
+            <div class="picture-content">
+                <div class="picture-left">
+                    <label ng-class="pictureObj.pic3.title">工牌照片</label>
+
+                    <div class="picture-text">请保证公司logo或名称拍摄清晰</div>
+
+                    <div class="picture-btn button" ng-style="pictureObj.pic3.btnStyle" ng-click="takePicture(3)"
+                         ng-bind="pictureObj.pic3.btn"></div>
+                </div>
+                <div class="picture-right">
+                    <div class="pic-mask" ng-style="pictureObj.pic3.mask">
+                        <img class="pic-loading" ng-show="pictureObj.pic3.loading" src="img/loan/pic_loading.gif"
+                             alt=""/>
+
+                        <div class="pic-errorText" ng-show="errorInfo.pic3" ng-bind="errorInfo.pic3"></div>
+                    </div>
+                    <img class="img-pic" data-type="3" src="{{pictureObj.pic3.src}}" alt=""/>
+                </div>
+            </div>
+            <div class="safyinfo-btn" ng-style="submit_style">
+                <div class="safyinfo-submit button" ng-click="submit()" ng-bind="submitText"></div>
+            </div>
+        </div>
+
+        <input id="takepicture" type="file" accept="image/*" capture="camera" style="display: none">
+    </ion-content>
+</ion-view>

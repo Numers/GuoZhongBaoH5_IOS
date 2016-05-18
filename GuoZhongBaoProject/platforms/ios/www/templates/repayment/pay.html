@@ -1,0 +1,24 @@
+<ion-view view-title="银行卡一键支付">
+    <ion-content>
+        <form class="pay-form">
+            <div class="control-group">
+                <label class="control-label">银行卡</label>
+                <input type="tel" name="bank" id="bank" ng-model="payModel.bank" placeholder="请输入银行卡号"
+                       class="control-input-text">
+            </div>
+            <div class="control-group">
+                <label class="control-label">验证码</label>
+                <input type="tel" name="bank" id="code" ng-model="payModel.code" placeholder="请输入验证码"
+                       class="control-input-text">
+                <button class="control-small-button" ng-disabled="countdownModel.disabled" ng-click="getCode()">{{ countdownModel.text }}</button>
+            </div>
+            <div class="padding">
+                <button type="button" class="button control-block-button"
+                        ng-disabled="buttonModel.load" ng-click="checkForm()">
+                    <i class="icon ion-load-c icon-loading" ng-show="buttonModel.load"></i>
+                    {{ buttonModel.text }}
+                </button>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>
